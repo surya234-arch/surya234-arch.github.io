@@ -1,0 +1,158 @@
+ 
+    /* ---- Reset & Global ---- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    .glow {
+      text-shadow: 0 0 15px #00f5ff, 0 0 25px #00f5ff;
+    }
+
+    /* ---- Particles Background ---- */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+    }
+
+    /* ---- Navbar ---- */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 50px;
+      padding: 20px;
+      /* background: rgba(0, 0, 0, 0.4); */
+      background:rgba(37, 43, 64, 0.08);
+      backdrop-filter: blur(1px);
+      z-index: 1000;
+    }
+    nav a {
+      color: #00f5ff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ff0080;
+       text-shadow: 0 0 15px #ff0080, 0 0 25px #00f5ff;
+    }
+         
+    /* ---- Section ---- */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    /* ---- Hero ---- */
+    .hero {
+      margin-top: 100px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .profile-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 30px 0;
+      overflow: hidden;
+    }
+    .profile-container::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: conic-gradient(#00f5ff, #ff0080, #00f5ff);
+      animation: spin 3s linear infinite;
+      z-index: 0;
+    }
+    .profile-container img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #0f2027;
+    }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+
+    /* ---- Projects ---- */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin-top: 30px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #00f5ff;
+    }
+
+    /* ---- About ---- */
+    .about {
+      max-width: 800px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* ---- Contact ---- */
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 25px;
+    }
+    
+    .social-icons a {
+      color: white;
+      font-size: 2rem;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      text-shadow: 0 0 15px #00f5ff, 0 0 25px #00f5ff;
+      color: #00f5ff;
+      transform: scale(1.2);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
